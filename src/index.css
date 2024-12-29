@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .form-control {
+        @apply h-10 rounded-md border border-neutral-300 outline-none px-4 bg-white focus:ring-1 focus:ring-orange-500 focus:border-orange-500 text-base;
+    }
+    select.form-control {
+        @apply appearance-none bg-select bg-no-repeat bg-[length:20px_20px] bg-[right_16px_center] pr-10;
+    }
+    .form-label {
+        @apply inline-block mb-2 font-medium text-neutral-500 text-sm;
+    }
+    .form-radio-input {
+        @apply hidden;
+    }
+    .form-radio-label {
+        @apply h-10 border border-neutral-300 px-4 flex items-center rounded-md before:w-4 before:h-4 before:rounded-full before:border before:border-neutral-400 before:flex-shrink-0 before:mr-2 text-base cursor-pointer hover:bg-neutral-50;
+    }
+    .form-radio-input:checked + .form-radio-label {
+        @apply before:border-orange-500 before:border-4;
+    }
+    .btn {
+        @apply h-10 rounded-md inline-flex items-center justify-center text-center px-4 outline-none;
+    }
+    .btn-primary {
+        @apply bg-orange-500 text-white text-base font-medium hover:bg-orange-600;
+    }
+    .btn-light {
+        @apply bg-white hover:bg-neutral-100;
+    }
+}
