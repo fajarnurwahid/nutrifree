@@ -23,7 +23,7 @@ const TOTAL: TotalType = {
     gender: "",
     activity: "",
 };
-const NUTREIN: NutrienType = {
+const NUTRIEN: NutrienType = {
     protein: 0,
     carbohydrate: 0,
     fat: 0,
@@ -33,7 +33,7 @@ export default function Home() {
     const [isResult, setIsResult] = useState(false);
     const [caloriTotal, setCaloriTotal] = useState(0);
     const [total, setTotal] = useState(TOTAL);
-    const [nutrein, setNutrien] = useState(NUTREIN);
+    const [nutrien, setNutrien] = useState(NUTRIEN);
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -105,7 +105,7 @@ export default function Home() {
                                 </div>
                                 <div className="bg-white rounded-lg p-4 sm:p-8 border border-neutral-200 w-full">
                                     <p className="text-center text-xl font-medium mb-8 leading-tight">Komposisi Gizi Harian Anda</p>
-                                    <MakroNutrienChart data={nutrein} />
+                                    <MakroNutrienChart data={nutrien} />
                                 </div>
                             </div>
                             <div className="text-center mt-8">

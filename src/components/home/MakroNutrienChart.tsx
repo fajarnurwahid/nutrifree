@@ -7,7 +7,7 @@ type MakroNutrienChartProps = React.HTMLAttributes<HTMLCanvasElement> & {
     data: NutrienType;
 };
 
-const NUTREIN_TITLE: Record<keyof NutrienType, string> = {
+const NUTRIEN_TITLE: Record<keyof NutrienType, string> = {
     protein: "Protein",
     carbohydrate: "Karbohidrat",
     fat: "Lemak",
@@ -25,7 +25,7 @@ export default function MakroNutrienChart({ className, data }: MakroNutrienChart
             chartRef.current = new Chart(canvasRef.current, {
                 type: "pie",
                 data: {
-                    labels: Object.keys(data).map((key) => NUTREIN_TITLE[key as keyof NutrienType]),
+                    labels: Object.keys(data).map((key) => NUTRIEN_TITLE[key as keyof NutrienType]),
                     datasets: [
                         {
                             data: Object.values(data),
