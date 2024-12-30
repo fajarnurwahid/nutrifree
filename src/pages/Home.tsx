@@ -120,11 +120,12 @@ export default function Home() {
                             <p className="text-neutral-500 text-center mb-8">Hitung nutrisimu cepat, simple, dan gratis!</p>
                             <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">
                                 <div>
-                                    <label htmlFor="" className="form-label">
+                                    <label htmlFor="age" className="form-label">
                                         Usia (tahun)
                                     </label>
                                     <input
                                         type="number"
+                                        id="age"
                                         name="age"
                                         className="form-control w-full"
                                         defaultValue={total.age ? total.age : ""}
@@ -133,11 +134,12 @@ export default function Home() {
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="" className="form-label">
+                                    <label htmlFor="weight" className="form-label">
                                         Berat Badan (kg)
                                     </label>
                                     <input
                                         type="number"
+                                        id="weight"
                                         name="weight"
                                         className="form-control w-full"
                                         defaultValue={total.weight ? total.weight : ""}
@@ -145,11 +147,12 @@ export default function Home() {
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="" className="form-label">
+                                    <label htmlFor="height" className="form-label">
                                         Tinggi Badan (cm)
                                     </label>
                                     <input
                                         type="number"
+                                        id="height"
                                         name="height"
                                         className="form-control w-full"
                                         defaultValue={total.height ? total.height : ""}
@@ -190,10 +193,15 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div>
-                                    <label htmlFor="" className="form-label">
+                                    <label htmlFor="activity" className="form-label">
                                         Tingkat Aktivitas
                                     </label>
-                                    <select className="form-control w-full" name="activity" defaultValue={total.activity ? total.activity : "light"}>
+                                    <select
+                                        className="form-control w-full"
+                                        id="activity"
+                                        name="activity"
+                                        defaultValue={total.activity ? total.activity : "light"}
+                                    >
                                         <option value="rare">Jarang (tidak aktif)</option>
                                         <option value="light">Ringan (1-3 hari/minggu)</option>
                                         <option value="medium">Sedang (3-5 hari/minggu)</option>
