@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 import { type NutrienType } from "../../pages/Home";
 
-type MakroNutrienChartProps = React.HTMLAttributes<HTMLCanvasElement> & {
+type MakroNutrienChartProps = React.HTMLAttributes<HTMLDivElement> & {
     data: NutrienType;
 };
 
